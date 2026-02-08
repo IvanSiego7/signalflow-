@@ -15,10 +15,10 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {['Dashboard', 'Markets', 'Signals', 'API'].map((item) => (
+          {['Features', 'Market Data', 'Pricing', 'API'].map((item) => (
             <a 
               key={item} 
-              href="#" 
+              href={`#${item.toLowerCase().replace(' ', '-')}`}
               className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
             >
               {item}
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                 Log In
             </button>
             <button className="px-5 py-2 rounded-lg bg-[#00F0FF] hover:bg-[#00d0df] text-black font-bold text-sm transition-all hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]">
-                Launch App
+                Get Started
             </button>
         </div>
       </div>
